@@ -1,38 +1,60 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  margin-top: 70px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.topbar {
+  /* margin-top: -25px; */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #a8dadc;
   color: white;
+   align-items: center;
+  text-align: center; 
+  display: flex;
+  justify-content: space-evenly;
+
+}
+.topbar input {
+  height: 26px;
+  width: 200px;
+}
+.login{
+  width: 64px;
+  height: 32px;
+}
+.more .cart:hover {
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.sidebar-menu {
+  padding-left: 10px;
+  padding-top: 5px;
+  flex: 0.3;
+  flex-direction: row;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contents {
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-right: 5px;
+  flex: 0.7;
+}
+
+.card-view {
+  justify-content: space-between;
+  
+}
+
+.contents button {
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+}
+
+.image-grid{
+  flex-wrap: wrap;
+  display: inline;
 }

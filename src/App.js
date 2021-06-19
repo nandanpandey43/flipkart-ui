@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState, useEffect } from 'react'
+import Topbar from './components/Topbar';
+import SidebarMenu from './components/SidebarMenu';
+import Contents from './components/Contents';
+import { products } from './data';
 
 function App() {
+
+  const [lowOrHigh, setlowOrHigh] = useState(null);
+  
+
+  
+  
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      {/* Topbar */}
+      <Topbar />
+
+      {/* left sidebar features */}
+      <SidebarMenu lowOrHigh={lowOrHigh} setlowOrHigh={setlowOrHigh} />
+
+      {/* right sidebar features */}
+      <Contents />
+
+      
     </div>
   );
 }
