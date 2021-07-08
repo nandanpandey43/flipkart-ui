@@ -3,13 +3,12 @@ import React, { useState, useEffect } from 'react'
 import Topbar from './components/Topbar';
 import SidebarMenu from './components/SidebarMenu';
 import Contents from './components/Contents';
-import { products } from './data';
+import data from './data';
 
 function App() {
 
-  const [lowOrHigh, setlowOrHigh] = useState(null);
   
-
+  const [product, setproduct] = useState(data)
   
   
 
@@ -21,10 +20,10 @@ function App() {
       <Topbar />
 
       {/* left sidebar features */}
-      <SidebarMenu lowOrHigh={lowOrHigh} setlowOrHigh={setlowOrHigh} />
+      <SidebarMenu product={product} setproduct={setproduct} />
 
       {/* right sidebar features */}
-      <Contents />
+      <Contents product={product} setproduct={setproduct}/>
 
       
     </div>
